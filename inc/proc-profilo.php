@@ -16,7 +16,7 @@
     // esempio
     $nome = "Pippo";
     $cognome = "Pluto";
-    $email = $nomeUtente;
+    $email = "a.a@a";
     $domandaRecuperoPassword = "2";
 
 

@@ -1,8 +1,17 @@
 <?php
-    $Database="CREATE DATABASE IF NOT EXISTS Profilo";
-    echo "Database creata con sucesso";
+    $server = "localhost";
+    $utente = "root";
+    $password = "";
+    $db="Profilo";
+    
+    $databaseConnected = mysqli_connect($server, $utente, $password, $db);
+    $sql = "CREATE DATABASE IF NOT EXISTS Profilo";
+    $res = mysqli_query($databaseConnected, $sql);
+    
+    if (!$res) die("Errore nella creazione...".mysqli_errno($res));
+    echo "Database creata con sucesso, ";
 
-    $TabRegistrati="CREATE TABLE IF NOT EXISTS TabRegistrati
+    $sql="CREATE TABLE IF NOT EXISTS TabRegistrati
                     (
                         Utente int AUTO_INCREMENT PRIMARY KEY,
                         nome varchar(15),
@@ -14,4 +23,7 @@
                         rispostaRec varchar(30)
                     )";
     echo "Creazione Tabella con sucesso";
+
+    $ok=mysqli_query($databaseConnected,$sql);
+    if (!$ok) die("Errore query: ".mysqli_errno($databaseConnected));
 ?>
