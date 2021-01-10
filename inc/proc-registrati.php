@@ -22,7 +22,9 @@
                         ntelefono varchar(20),
                         passwordUtente varchar(20),
                         domandaRec varchar(30),
-                        rispostaRec varchar(30)
+                        rispostaRec varchar(30),
+                        manoUsata varchar(20),
+                        Orario varchar(20)
                     )";
     echo "Creazione Tabella con sucesso";
 
