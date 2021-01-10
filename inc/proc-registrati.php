@@ -1,3 +1,5 @@
+<?php include 'Database.php' ?>
+
 <?php
     $server = "localhost";
     $utente = "root";
