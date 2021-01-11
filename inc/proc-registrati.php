@@ -28,23 +28,5 @@
                     )";
     echo "Creazione Tabella con sucesso";
 
-    $ok=mysqli_query($databaseConnected,$sql);
-    if (!$ok) die("Errore query: ".mysqli_errno($databaseConnected));
-    if(isset($_POST['Registrati']))
-    {
-        $nome=$_POST['nome'];
-        $cognome=$_POST['cognome'];
-        $email=$_POST['email'];
-        $numeroDiTelefono=$_POST['numeroDiTelefono'];
-        $password=$_POST['password'];
-        $domandaRecuperoPassword=$_POST['domandaRecuperoPassword'];
-        $rispostaRecuperoPassword=$_POST['rispostaRecuperoPassword'];
-        $manoUsata=$_POST['manoUsata'];
-        $fasciaOraria=$_POST['fasciaOraria'];
-
-        $sql='INSERT INTO TabRegistrati(nome,cognome,email,ntelefono,passwordUtente,domandaRec,rispostaRec,manoUsata,Orario) Values ('$nome','$cognome','$email','$numeroDiTelefono','$password','$domandaRecuperoPassword','$rispostaRecuperoPassword','$manoUsata','$fasciaOraria')';
-        $res=mysqli_query($databaseConnected,$sql);
-        if(!$res)
-        die('errore inserimento $sql'.mysqli_errno($databaseConnected));
-    }
+    
 ?>

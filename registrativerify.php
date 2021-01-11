@@ -56,4 +56,36 @@
     <?php include 'debug.php' ?>
 </body>
 
+<?php
+
+$server = "localhost";
+    $utente = "root";
+    $password = "";
+    $database="Profilo";
+    
+    $databaseConnected = mysqli_connect($server, $utente, $password, $database);
+
+    
+
+    $nome=$_POST['nome'];
+    $cognome=$_POST['cognome'];
+    $email=$_POST['email'];
+    $numeroDiTelefono=$_POST['numeroDiTelefono'];
+    $password=$_POST['password'];
+    $domandaRecuperoPassword=$_POST['domandaRecuperoPassword'];
+    $rispostaRecuperoPassword=$_POST['rispostaRecuperoPassword'];
+    $manoUsata=$_POST['manoUsata'];
+    $fasciaOraria=$_POST['fasciaOraria'];
+
+    $sql ="USE Profilo";
+    $res=mysqli_query($databaseConnected,$sql);
+    $sql='INSERT INTO TabRegistrati
+    (nome,cognome,email,ntelefono,passwordUtente,domandaRec,rispostaRec,manoUsata,Orario) Values 
+    ($nome, $cognome, $email , $numeroDiTelefono , $password , $domandaRecuperoPassword , $rispostaRecuperoPassword , $manoUsata , $fasciaOraria )';
+    $res=mysqli_query($databaseConnected,$sql);
+    if(!$res)
+    die('errore inserimento $sql'.mysqli_errno($databaseConnected));
+
+?>
+
 </html>
