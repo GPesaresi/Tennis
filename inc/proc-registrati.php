@@ -4,9 +4,9 @@
     $server = "localhost";
     $utente = "root";
     $password = "";
-    $db="Profilo";
+    $database="Profilo";
     
-    $databaseConnected = mysqli_connect($server, $utente, $password, $db);
+    $databaseConnected = mysqli_connect($server, $utente, $password, $database);
     $sql = "CREATE DATABASE IF NOT EXISTS Profilo";
     $res = mysqli_query($databaseConnected, $sql);
     
@@ -42,18 +42,7 @@
         $manoUsata=$_POST['manoUsata'];
         $fasciaOraria=$_POST['fasciaOraria'];
 
-        $sql='INSERT INTO TabRegistrati
-            (
-                $nome,
-                $cognome,
-                $email,
-                $numeroDiTelefono,
-                $password,
-                $domandaRecuperoPassword,
-                $rispostaRecuperoPassword,
-                $manoUsata,
-                $fasciaOraria
-            ) ';
+        $sql='INSERT INTO TabRegistrati(nome,cognome,email,ntelefono,passwordUtente,domandaRec,rispostaRec,manoUsata,Orario) Values ('$nome','$cognome','$email','$numeroDiTelefono','$password','$domandaRecuperoPassword','$rispostaRecuperoPassword','$manoUsata','$fasciaOraria')';
         $res=mysqli_query($databaseConnected,$sql);
         if(!$res)
         die('errore inserimento $sql'.mysqli_errno($databaseConnected));
