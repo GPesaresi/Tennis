@@ -27,13 +27,8 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="nome">Nome</label>
-
-                            
-                            <form action="inc/proc-registrati.php.php" method="POST" >
                             <input type="text" class="form-control" name="nome" id="nome" placeholder=""
-
                                 value="" required>
-                            </form>
                             <div class="invalid-feedback">
                                 È richiesto un nome valido.
                             </div>
@@ -42,7 +37,6 @@
                             <label for="cognome">Cognome</label>
                             <input type="text" class="form-control" name="cognome" id="cognome" 
                                 placeholder="" value="" required>
-                            </form>
                             <div class="invalid-feedback">
                                 È richiesto un cognome valido.
                             </div>
@@ -51,9 +45,7 @@
 
                     <div class="mb-3">
                         <label for="email">Email <span class="text-muted"></span></label>
-                        <form action="inc/proc-registrati.php.php" method="POST" >
                         <input type="email" class="form-control" name="email" id="email" required>
-                        </form>
                         <div class=" invalid-feedback">
                             Inserisci un indirizzo email valido.
                         </div>
