@@ -27,7 +27,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="nome">Nome</label>
-                            <input type="text" class="form-control" name="nome" id="nome" name="nome" placeholder=""
+                            <input type="text" class="form-control" name="nome" id="nome"  placeholder=""
                                 value="" required>
                             <div class="invalid-feedback">
                                 È richiesto un nome valido.
@@ -35,7 +35,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="cognome">Cognome</label>
-                            <input type="text" class="form-control" name="cognome" id="cognome" name="cognome"
+                            <input type="text" class="form-control" name="cognome" id="cognome" 
                                 placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 È richiesto un cognome valido.
