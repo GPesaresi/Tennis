@@ -23,7 +23,7 @@
         <div class="row">
             <div class="offset-md-2 col-md-8 order-md-1">
                 <h4 class="mb-3">Compila i campi per essere registrato al sistema</h4>
-                <form action="registrativerify.php" method="post">
+                <form action="inc/proc-registrati.php" method="post">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="nome">Nome</label>
