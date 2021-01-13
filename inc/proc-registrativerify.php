@@ -30,11 +30,7 @@
         $server = "localhost";
         $utente = "root";
         $password = "";
-
         $databaseConnected = mysqli_connect($server, $utente, $password);
-
-        $commando="USE Profilo";
-        $res=mysqli_query($databaseConnected,$commando);
 
         $nome=$_POST['nome'];
         $cognome=$_POST['cognome'];
@@ -44,9 +40,11 @@
         $domandaRecuperoPassword=$_POST['domandaRecuperoPassword'];
         $rispostaRecuperoPassword=$_POST['rispostaRecuperoPassword'];
         $manoUsata=$_POST['manoUsata'];
-        $fasciaOraria=$_POST['fasciaOrario'];
+        $fasciaOrario=$_POST['fasciaOrario'];
 
-        $sql="INSERT INTO TabRegistrati(nome,cognome,email,ntelefono,passwordUtente,domandaRec,rispostaRec,manoUsata,Orario) Values ('$nome','$cognome','$email','$numeroDiTelefono','$password','$domandaRecuperoPassword','$rispostaRecuperoPassword','$manoUsata','$fasciaOraria')";
+        $sql ="USE Profilo";
+        $res=mysqli_query($databaseConnected,$sql);
+        $sql="INSERT INTO TabRegistrati(nome,cognome,email,ntelefono,passwordUtente,domandaRec,rispostaRec,manoUsata,Orario) Values ('$nome', '$cognome', '$email' , '$numeroDiTelefono' , '$password' , '$domandaRecuperoPassword' , '$rispostaRecuperoPassword' , '$manoUsata' , '$fasciaOrario' )";
         $res=mysqli_query($databaseConnected,$sql);
         if(!$res)
         die('errore inserimento $sql'.mysqli_errno($databaseConnected));
