@@ -36,7 +36,7 @@
                         <h3 class="mb-0">
                         </h3>
                     </div>
-                    <img class="card-img-right flex-auto d-none d-md-block" src="/Tennis/img/campo1.jpg"
+                    <img class="card-img-right flex-auto d-none d-md-block" src="Progetto_Tennis/Tennis/img/campo1.jpg"
                         alt="Card image cap">
                 </div>
             </div>
@@ -47,7 +47,7 @@
                         <h3 class="mb-0">
                         </h3>
                     </div>
-                    <img class="card-img-right flex-auto d-none d-md-block" src="/Tennis/img/campo2.jpg"
+                    <img class="card-img-right flex-auto d-none d-md-block" src="Progetto_Tennis/Tennis/img/campo2.jpg"
                         alt="Card image cap">
                 </div>
             </div>
@@ -60,7 +60,7 @@
                         <h3 class="mb-0">
                         </h3>
                     </div>
-                    <img class="card-img-right flex-auto d-none d-md-block" src="/Tennis/img/campo3.jpg"
+                    <img class="card-img-right flex-auto d-none d-md-block" src="Progetto_Tennis/Tennis/img/campo3.jpg"
                         alt="Card image cap">
                 </div>
             </div>
@@ -72,7 +72,7 @@
                         <h3 class="mb-0">
                         </h3>
                     </div>
-                    <img class="card-img-right flex-auto d-none d-md-block" src="/Tennis/img/campo4.jpg"
+                    <img class="card-img-right flex-auto d-none d-md-block" src="Progetto_Tennis/Tennis/img/campo4.jpg"
                         alt="Card image cap">
                 </div>
             </div>
