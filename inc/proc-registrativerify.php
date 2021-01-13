@@ -44,7 +44,7 @@
         $domandaRecuperoPassword=$_POST['domandaRecuperoPassword'];
         $rispostaRecuperoPassword=$_POST['rispostaRecuperoPassword'];
         $manoUsata=$_POST['manoUsata'];
-        $fasciaOraria=$_POST['fasciaOraria'];
+        $fasciaOraria=$_POST['fasciaOrario'];
 
         $sql="INSERT INTO TabRegistrati(nome,cognome,email,ntelefono,passwordUtente,domandaRec,rispostaRec,manoUsata,Orario) Values ('$nome','$cognome','$email','$numeroDiTelefono','$password','$domandaRecuperoPassword','$rispostaRecuperoPassword','$manoUsata','$fasciaOraria')";
         $res=mysqli_query($databaseConnected,$sql);
