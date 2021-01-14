@@ -19,7 +19,7 @@
                         nome varchar(15),
                         cognome varchar(15),
                         email varchar(20),
-                        ntelefono int(20),
+                        ntelefono int,
                         passwordUtente varchar(20),
                         domandaRec varchar(64),
                         rispostaRec varchar(30),
