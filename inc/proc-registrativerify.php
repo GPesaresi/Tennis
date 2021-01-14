@@ -35,12 +35,12 @@
         $nome=$_POST['nome'];
         $cognome=$_POST['cognome'];
         $email=$_POST['email'];
-        $numeroDiTelefono=$_POST['numeroDiTelefono'];
+        $numeroDiTelefono= (int) $_POST['numeroDiTelefono'];
         $password=$_POST['password'];
-        $domandaRecuperoPassword=$_POST['domandaRecuperoPassword'];
+        $domandaRecuperoPassword= (int) $_POST['domandaRecuperoPassword'];
         $rispostaRecuperoPassword=$_POST['rispostaRecuperoPassword'];
         $manoUsata=$_POST['manoUsata'];
-        $fasciaOrario=$_POST['fasciaOrario'];
+        $fasciaOrario= (int) $_POST['fasciaOrario'];
 
         $sql ="USE Profilo";
         $res=mysqli_query($databaseConnected,$sql);
