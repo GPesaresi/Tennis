@@ -35,9 +35,9 @@
         $nome=$_POST['nome'];
         $cognome=$_POST['cognome'];
         $email=$_POST['email'];
-        $numeroDiTelefono= (int) $_POST['numeroDiTelefono'];
+        $numeroDiTelefono=$_POST['numeroDiTelefono'];
         $password=$_POST['password'];
-        $domandaRecuperoPassword= (int) $_POST['domandaRecuperoPassword'];
+        $domandaRecuperoPassword=$_POST['domandaRecuperoPassword'];
         $rispostaRecuperoPassword=$_POST['rispostaRecuperoPassword'];
         $manoUsata=$_POST['manoUsata'];
         $fasciaOrario=$_POST['fasciaOrario'];
