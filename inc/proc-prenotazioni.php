@@ -65,7 +65,8 @@
                         NGiocatori int(20),
                         Luci varchar(30),
                         Riscaldamento varchar(30),
-                        CostoTot int(20)
+                        CostoTot int(20),
+						MetodoPagamento varchar(10),
                     )";
     echo "Creazione Tabella con sucesso";
 
