@@ -34,7 +34,7 @@
                         </label>
                     </div>
                     <hr class="mb-4">
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Avanti</button>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" name="Avanti">Avanti</button>
                 </form>
             </div>
         </div><!-- /.row -->
