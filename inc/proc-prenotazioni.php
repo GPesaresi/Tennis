@@ -63,8 +63,8 @@
                         Orario varchar(20),
                         DataPrenota int(20),
                         NGiocatori int(20),
-                        Luci varchar(30),
-                        Riscaldamento varchar(30),
+                        Luci boolean(30),
+                        Riscaldamento boolean(30),
                         CostoTot int(20),
 						MetodoPagamento varchar(10),
                     )";
