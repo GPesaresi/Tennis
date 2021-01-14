@@ -19,6 +19,14 @@
     <?php include 'inc/proc-prenotaconferma.php' ?>
     <?php include 'menu.php' ?>
 
+    <?php
+    $numeroGiocatori= $_POST['numeroGiocatori'];
+    $inputLuci= $_POST ['inputLuci'];
+    $inputRiscaldamento= $_POST ['inputRiscaldamento'];
+    $inputGiorno= $_POST ['inputGiorno'];
+    ?>
+
+
     <main role="main" class="container container-form-signin">
         <div class="row">
             <div class="offset-md-3 col-md-6 text-center">

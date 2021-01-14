@@ -14,7 +14,7 @@
 	$giornodavisualizzare = strtotime("+".$giorno." day");
 
 	// si riempe l'arry utilizzato per visualizzare il tabellone delle prenotazioni
-	for( $idx=0; $idx<$numerocampi; $idx++)
+	/*for( $idx=0; $idx<$numerocampi; $idx++)
 	{
 		// instanzio una prenotazione, gli orari sono tutti liberi
 		$item = new DettaglioPrenotazioni(sprintf("%03d", $idx + 1), $orarioInizio, $orarioFine);
@@ -32,10 +32,10 @@
 
 		//$item->Prenota(10);
 		//$item->Prenota(13);
-	}
+	}*/
 
 	// se non si è soci si disabilita il tabellone se è il giorno riservato ai soci
-	if ($socio == false)
+	/*if ($socio == false)
 	{
 		if(strtotime("now") == $rangePrenotazioniInizio){
 			$disabilitaprenotazione = true;
@@ -46,7 +46,7 @@
 	if($giornodavisualizzare < $rangePrenotazioniInizio || $giornodavisualizzare > $rangePrenotazioniFine)
 	{
 		$disabilitaprenotazione = true;
-	}
+	}*/
 
 	$server = "localhost";
     $utente = "root";

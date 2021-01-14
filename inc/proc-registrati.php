@@ -21,7 +21,7 @@
                         email varchar(20),
                         ntelefono int(20),
                         passwordUtente varchar(20),
-                        domandaRec int(30),
+                        domandaRec varchar(64),
                         rispostaRec varchar(30),
                         manoUsata varchar(20),
                         Orario varchar(20)
