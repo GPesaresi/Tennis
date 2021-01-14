@@ -19,9 +19,9 @@
                         nome varchar(15),
                         cognome varchar(15),
                         email varchar(20),
-                        ntelefono varchar(20),
+                        ntelefono int(20),
                         passwordUtente varchar(20),
-                        domandaRec varchar(30),
+                        domandaRec int(30),
                         rispostaRec varchar(30),
                         manoUsata varchar(20),
                         Orario varchar(20)
