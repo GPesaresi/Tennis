@@ -53,7 +53,7 @@
 
                     <div class="mb-3">
                         <label for="numeroDiTelefono">Numero di telefono</label>
-                        <input type="text" class="form-control" name="numeroDiTelefono " id="numeroDiTelefono" required>
+                        <input type="number" class="form-control" name="numeroDiTelefono " id="numeroDiTelefono" required>
                         <div class="invalid-feedback">
                             Inserisci un numero di telefono valido.
                         </div>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Registrati</button>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit" name="Registrati" >Registrati</button>
 
                 </form>
             </div>
