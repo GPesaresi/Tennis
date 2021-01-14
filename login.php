@@ -40,7 +40,7 @@
                         </label>
                     </div>
                     <hr class="mb-4">
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Accedi</button>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" name="Accedi" >Accedi</button>
                 </form>
             </div>
         </div><!-- /.row -->
