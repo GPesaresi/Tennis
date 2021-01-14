@@ -27,9 +27,6 @@
 
     if(isset($_POST['Registrati']))
     {
-        $server = "localhost";
-        $utente = "root";
-        $password = "";
         $databaseConnected = mysqli_connect($server, $utente, $password);
 
         $nome=$_POST['nome'];
@@ -44,10 +41,12 @@
 
         $sql ="USE Profilo";
         $res=mysqli_query($databaseConnected,$sql);
-        $sql="INSERT INTO TabRegistrati(nome,cognome,email,ntelefono,passwordUtente,domandaRec,rispostaRec,manoUsata,Orario) Values ('$nome', '$cognome', '$email' , '$numeroDiTelefono' , '$password' , '$domandaRecuperoPassword' , '$rispostaRecuperoPassword' , '$manoUsata' , '$fasciaOrario' )";
+        $sql="INSERT INTO TabRegistrati".
+            "(nome,cognome,email,ntelefono,passwordUtente,domandaRec,rispostaRec,manoUsata,Orario) ".
+            "Values".
+            "('$nome', '$cognome', '$email' , $numeroDiTelefono , '$password' , '$domandaRecuperoPassword' , '$rispostaRecuperoPassword' , '$manoUsata' , '$fasciaOrario' )";
         $res=mysqli_query($databaseConnected,$sql);
         if(!$res)
-        die('errore inserimento $sql'.mysqli_errno($databaseConnected));
-    }
-   
+            die('errore inserimento $sql'.mysqli_errno($databaseConnected));
+    }  
 ?>

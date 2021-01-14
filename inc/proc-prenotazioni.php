@@ -68,7 +68,7 @@
                         CostoTot int(20),
 						MetodoPagamento varchar(10),
                     )";
-    echo "Creazione Tabella con sucesso";
+    echo "Creazione Tabella con successo";
 
     $ok=mysqli_query($databaseConnected,$sql);
     if (!$ok) die("Errore query: ".mysqli_errno($databaseConnected));

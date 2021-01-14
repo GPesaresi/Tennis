@@ -53,7 +53,7 @@
 
                     <div class="mb-3">
                         <label for="numeroDiTelefono">Numero di telefono</label>
-                        <input type="number" class="form-control" name="numeroDiTelefono " id="numeroDiTelefono" required>
+                        <input type="number" class="form-control" name="numeroDiTelefono" id="numeroDiTelefono" required>
                         <div class="invalid-feedback">
                             Inserisci un numero di telefono valido.
                         </div>
@@ -67,7 +67,7 @@
                     <div class="row">
                         <div class="col-md-5 mb-3">
                             <label for="domandaRecuperoPassword">Domanda per il recupero della password</label>
-                            <select class="custom-select d-block w-100" name="domandaRecuperoPassword "
+                            <select class="custom-select d-block w-100" name="domandaRecuperoPassword"
                                 id="domandaRecuperoPassword" required>
                                 <option value="">Scegli</option>
                                 <option value="1">In che scuola sei diplomato?</option>
@@ -104,7 +104,7 @@
                     <div class="row">
                         <div class="col-md-5 mb-3">
                             <label for="fasciaOrario">Fascia d'orario di preferenza gioco</label>
-                            <select class="custom-select d-block w-100" name="fasciaOrario " id="fasciaOrario" required>
+                            <select class="custom-select d-block w-100" name="fasciaOrario" id="fasciaOrario" required>
                                 <option value="">Scegli</option>
                                 <option>Mattina</option>
                                 <option>Pomeriggio</option>

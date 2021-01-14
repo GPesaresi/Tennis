@@ -2,6 +2,7 @@
     $redirectlink = $home;
     $messaggio = "";
 
+    $id = 0;
     $nome = "";
     $cognome = "";
     $email = "";
@@ -12,29 +13,33 @@
     $manoUsata = "";
     $fasciaOrario = "";
 
-    // prendo i dati del profilo dal db e gli assegno alle variabili
-    // esempio
-    /*$nome = "Pippo";
-    $cognome = "Pluto";
-    $email = "a.a@a";
-    $domandaRecuperoPassword = "2";*/
+    // ==================================================================================
+    $con = mysqli_connect($server, $utente, $password, $database);
 
-    $server = "localhost";
-    $utente = "root";
-    $password = "";
-    $db="Profilo";
-    
-    $databaseConnected = mysqli_connect($server, $utente, $password, $db);
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        exit();
+    }
 
-    $nome=$_POST['nome'];
-    $cognome=$_POST['cognome'];
-    $email=$_POST['email'];
-    $numeroDiTelefono=$_POST['numeroDiTelefono'];
-    $password=$_POST['password'];
-    $domandaRecuperoPassword=$_POST['domandaRecuperoPassword'];
-    $rispostaRecuperoPassword=$_POST['rispostaRecuperoPassword'];
-    $manoUsata=$_POST['manoUsata'];
-    $fasciaOrario=$_POST['fasciaOrario'];
+    $sql = "SELECT id, nome, cognome, email, ntelefono, passwordUtente, domandaRec, rispostaRec, manoUsata, Orario FROM TabRegistrati WHERE email = '$nomeutente'";
 
-    // una volta recuperati tutti i dati dalla form andiamo a memorizzare nel db
+    if ($result = mysqli_query($con, $sql)) {
+        // Fetch one and one row
+        while ($row = mysqli_fetch_row($result)) {
+            $id = $row[0];
+            $nome = $row[1];
+            $cognome = $row[2];
+            $email = $row[3];
+            $numeroDiTelefono = $row[4];
+            $password = $row[5];
+            $domandaRecuperoPassword = $row[6];
+            $rispostaRecuperoPassword = $row[7];
+            $manoUsata = $row[8];
+            $fasciaOrario = $row[9];
+        }
+        mysqli_free_result($result);
+    }
+
+    mysqli_close($con);
+    // ==================================================================================
 ?>

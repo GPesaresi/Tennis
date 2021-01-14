@@ -2,6 +2,7 @@
     $redirectlink = $home;
     $messaggio = "";
 
+    $id = "";
     $nome = "";
     $cognome = "";
     $email = "";
@@ -13,6 +14,7 @@
     $fasciaOrario = "";
 
     // controllo che la pagina è proviene da un submit
+    if (isset($_POST["id"])) $id = $_POST['id'];  
     if (isset($_POST["nome"])) $nome = $_POST['nome'];  
     if (isset($_POST["cognome"])) $cognome = $_POST['cognome'];  
     if (isset($_POST["email"])) $email = $_POST['email'];  
@@ -24,4 +26,22 @@
     if (isset($_POST["fasciaOrario"])) $fasciaOrario = $_POST['fasciaOrario'];  
 
     // una volta recuperati tutti i dati dalla form andiamo a memorizzare nel db
+
+    // ==================================================================================
+    $con = mysqli_connect($server, $utente, $password, $database);
+
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        exit();
+    }
+
+    $sql="UPDATE tabregistrati SET nome = '$nome', cognome = '$cognome', email = '$email', ntelefono' = '33310911154', 'passwordUtente' = 'azsxdcs', 'domandaRec' = '1s', 'rispostaRec' = 'fdss', 'manoUsata' = 'Destros', 'Orario' = 'Mattinas' WHERE 'tabregistrati'.'id' = $id";
+
+    mysqli_query($con, $sql);
+
+    mysqli_close($con);
+    // ==================================================================================
+
+
+
 ?>

@@ -1,34 +1,45 @@
 <?php include 'Database.php' ?>
 
 <?php
-    $server = "localhost";
-    $utente = "root";
-    $password = "";
-    $db="Profilo";
-    
-    $databaseConnected = mysqli_connect($server, $utente, $password, $db);
-    $sql = "CREATE DATABASE IF NOT EXISTS Profilo";
-    $res = mysqli_query($databaseConnected, $sql);
-    
-    if (!$res) die("Errore nella creazione...".mysqli_errno($res));
-    echo "Database creata con sucesso, ";
+    // ==================================================================================
+    $con = mysqli_connect($server, $utente, $password);
+
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        exit();
+    }
+
+    $sql = "CREATE DATABASE IF NOT EXISTS $database";
+
+    mysqli_query($con, $sql);
+
+    mysqli_close($con);
+    // ==================================================================================
+    // ==================================================================================
+    $con = mysqli_connect($server, $utente, $password, $database);
+
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        exit();
+    }
 
     $sql="CREATE TABLE IF NOT EXISTS TabRegistrati
                     (
-                        Utente int AUTO_INCREMENT PRIMARY KEY,
+                        id int AUTO_INCREMENT PRIMARY KEY,
                         nome varchar(15),
                         cognome varchar(15),
-                        email varchar(20),
-                        ntelefono int,
+                        email varchar(64) NOT NULL,
+                        ntelefono bigint,
                         passwordUtente varchar(20),
                         domandaRec varchar(64),
                         rispostaRec varchar(30),
                         manoUsata varchar(20),
                         Orario varchar(20)
                     )";
-    echo "Creazione Tabella con sucesso";
 
-    $ok=mysqli_query($databaseConnected,$sql);
-    if (!$ok) die("Errore query: ".mysqli_errno($databaseConnected));
-    
+    mysqli_query($con, $sql);
+
+    mysqli_close($con);
+    // ==================================================================================
+   
 ?>

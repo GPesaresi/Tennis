@@ -71,7 +71,7 @@
                     <div class="row">
                         <div class="col-md-5 mb-3">
                             <label for="domandaRecuperoPassword">Domanda per il recupero della password</label>
-                            <select class="custom-select d-block w-100" name="domandaRecuperoPassword "
+                            <select class="custom-select d-block w-100" name="domandaRecuperoPassword"
                                 id="domandaRecuperoPassword" required>
                                 <option value="">Scegli</option>
                                 <option <?php if ($domandaRecuperoPassword == "1") echo "selected"; ?>>In che scuola sei
@@ -123,6 +123,8 @@
                             </div>
                         </div>
                     </div>
+                    <input type="hidden" name="id" value="<?php echo $id ?>" />
+
                     <?php if ($socio == false) { ?>
                     <hr class="mb-4">
                     <a class="btn btn-primary btn-lg btn-block" href="abbonamento.php">Abbonati</a>

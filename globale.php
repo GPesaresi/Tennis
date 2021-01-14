@@ -5,6 +5,11 @@
 	// home page
 	$home = "/Tennis";
 
+	$server = "localhost";
+	$utente = "root";
+	$password = "";
+	$database = "Profilo";
+
 	// nome utente, se vuoto si presume utente anonimo
 	if (isset($_SESSION['nomeutente'])) {
 		$nomeutente	= $_SESSION['nomeutente'];

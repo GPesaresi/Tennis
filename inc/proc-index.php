@@ -1,11 +1,25 @@
 <?php
+    // ==================================================================================
+    $con = mysqli_connect($server, $utente, $password);
 
-    $server = "localhost";
-    $utente = "root";
-    $password = "";
-    $db="Profilo";
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        exit();
+    }
 
-    $databaseConnected = mysqli_connect($server, $utente, $password, $db);
+    $sql = "CREATE DATABASE IF NOT EXISTS $database";
+
+    mysqli_query($con, $sql);
+
+    mysqli_close($con);
+    // ==================================================================================
+    // ==================================================================================
+    $con = mysqli_connect($server, $utente, $password, $database);
+
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        exit();
+    }
 
     $sql="CREATE TABLE IF NOT EXISTS TabConfigurazione
                     (
@@ -16,10 +30,8 @@
                         PrezzoOrarioSocio int(20),
                         PrezzoOrarioNonSocio int(20)
                     )";
-    echo "Creazione Tabella con sucesso";
 
-    $ok=mysqli_query($databaseConnected,$sql);
-    if (!$ok) die("Errore query: ".mysqli_errno($databaseConnected));
+    mysqli_query($con, $sql);
 
     $sql="CREATE TABLE IF NOT EXISTS TabConfigurazioneLuce
                     (
@@ -30,11 +42,9 @@
                         PrezzoOrarioSocio int(20),
                         PrezzoOrarioNonSocio int(20)
                     )";
-    echo "Creazione Tabella con sucesso";
 
-    $ok=mysqli_query($databaseConnected,$sql);
-    if (!$ok) die("Errore query: ".mysqli_errno($databaseConnected));
-                    
+    mysqli_query($con, $sql);
+
     $sql="CREATE TABLE IF NOT EXISTS TabConfigurazioneRiscaldamento
                     (
                         Id int AUTO_INCREMENT PRIMARY KEY,
@@ -44,8 +54,9 @@
                         PrezzoOrarioSocio int(20),
                         PrezzoOrarioNonSocio int(20)
                     )";
-    echo "Creazione Tabella con sucesso";
 
-    $ok=mysqli_query($databaseConnected,$sql);
-    if (!$ok) die("Errore query: ".mysqli_errno($databaseConnected));                    
+    mysqli_query($con, $sql);
+
+    mysqli_close($con);
+    // ==================================================================================
 ?>
