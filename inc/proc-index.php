@@ -24,11 +24,11 @@
     $sql="CREATE TABLE IF NOT EXISTS TabConfigurazione
                     (
                         Id int AUTO_INCREMENT PRIMARY KEY,
-                        NumeroCampi varchar(15),
-                        OrarioInizio varchar(15),
-                        OrarioFine varchar(20),
-                        PrezzoOrarioSocio int(20),
-                        PrezzoOrarioNonSocio int(20)
+                        NumeroCampi int(),
+                        OrarioInizio varchar(32),
+                        OrarioFine varchar(32),
+                        PrezzoOrarioSocio int(),
+                        PrezzoOrarioNonSocio int()
                     )";
 
     mysqli_query($con, $sql);
@@ -36,11 +36,11 @@
     $sql="CREATE TABLE IF NOT EXISTS TabConfigurazioneLuce
                     (
                         Id int AUTO_INCREMENT PRIMARY KEY,
-                        dataInizioPeriodo varchar(15),
-                        dataFinePeriodo varchar(15),
-                        costoSoci int(20),
-                        PrezzoOrarioSocio int(20),
-                        PrezzoOrarioNonSocio int(20)
+                        dataInizioPeriodo varchar(32),
+                        dataFinePeriodo varchar(32),
+                        costoSoci int(),
+                        PrezzoOrarioSocio int(),
+                        PrezzoOrarioNonSocio int()
                     )";
 
     mysqli_query($con, $sql);
@@ -48,11 +48,11 @@
     $sql="CREATE TABLE IF NOT EXISTS TabConfigurazioneRiscaldamento
                     (
                         Id int AUTO_INCREMENT PRIMARY KEY,
-                        NumeroCampi varchar(15),
-                        OrarioInizio varchar(15),
-                        OrarioFine varchar(20),
-                        PrezzoOrarioSocio int(20),
-                        PrezzoOrarioNonSocio int(20)
+                        NumeroCampi int(),
+                        OrarioInizio varchar(32),
+                        OrarioFine varchar(32),
+                        PrezzoOrarioSocio int(),
+                        PrezzoOrarioNonSocio int()
                     )";
 
     mysqli_query($con, $sql);
