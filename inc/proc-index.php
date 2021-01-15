@@ -57,6 +57,23 @@
 
     mysqli_query($con, $sql);
 
-    mysqli_close($con);
     // ==================================================================================
+
+    $sql="CREATE TABLE IF NOT EXISTS TabPrenotazioni
+                    (
+                        Id int AUTO_INCREMENT PRIMARY KEY,
+                        Utente varchar(15),
+                        NumeroCampo int(15),
+                        Orario varchar(20),
+                        DataPrenota int(20),
+                        NGiocatori int(20),
+                        Luci boolean(30),
+                        Riscaldamento boolean(30),
+                        CostoTot int(20),
+						MetodoPagamento varchar(10),
+                    )";
+    echo "Creazione Tabella con successo";
+    
+    mysqli_query($con, $sql);
+    mysqli_close($con);
 ?>
