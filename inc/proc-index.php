@@ -57,8 +57,8 @@
 
     mysqli_query($con, $sql);
 
-<<<<<<< Updated upstream
-=======
+
+
     $sql="CREATE TABLE IF NOT EXISTS TabPrenotazioni
                     (
                         Id int AUTO_INCREMENT PRIMARY KEY,
@@ -75,26 +75,21 @@
 
     mysqli_query($con, $sql);
 
-    
-
-    mysqli_close($con);
->>>>>>> Stashed changes
-    // ==================================================================================
-
-    $sql="CREATE TABLE IF NOT EXISTS TabPrenotazioni
+    $sql="CREATE TABLE IF NOT EXISTS TabRegistrati
                     (
-                        Id int AUTO_INCREMENT PRIMARY KEY,
-                        Utente varchar(15),
-                        NumeroCampo int(15),
-                        Orario varchar(20),
-                        DataPrenota int(20),
-                        NGiocatori int(20),
-                        Luci boolean(30),
-                        Riscaldamento boolean(30),
-                        CostoTot int(20),
-						MetodoPagamento varchar(10)
+                        id int AUTO_INCREMENT PRIMARY KEY,
+                        nome varchar(15),
+                        cognome varchar(15),
+                        email varchar(64) NOT NULL,
+                        ntelefono bigint,
+                        passwordUtente varchar(20),
+                        domandaRec varchar(64),
+                        rispostaRec varchar(30),
+                        manoUsata varchar(20),
+                        Orario varchar(20)
                     )";
-    
+
     mysqli_query($con, $sql);
+    
     mysqli_close($con);
 ?>
