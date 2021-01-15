@@ -39,7 +39,7 @@
 
             if($ok){
 
-                $redirectlink=
+                $redirectlink= "";
                 /*$redirectlink = $home;
                 $messaggio = "Accesso effettuato";
 
@@ -50,9 +50,9 @@
                 // se si: bisogna impostare sesion = 1, oppure = 0
                 // i seguenti valori devono essere impostati in base alla proprieta dell'utente
                 $_SESSION['socio'] = 1;*/
-
-
             }
+
+            
             else{
                 $redirectlink = $home."/recuperopwd.php";
                 $messaggio = "Inserimento Email non corretto. Errore di autenticazione";
