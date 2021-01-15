@@ -70,9 +70,8 @@
                         Luci boolean(30),
                         Riscaldamento boolean(30),
                         CostoTot int(20),
-						MetodoPagamento varchar(10),
+						MetodoPagamento varchar(10)
                     )";
-    echo "Creazione Tabella con successo";
     
     mysqli_query($con, $sql);
     mysqli_close($con);
