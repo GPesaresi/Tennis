@@ -57,6 +57,28 @@
 
     mysqli_query($con, $sql);
 
+<<<<<<< Updated upstream
+=======
+    $sql="CREATE TABLE IF NOT EXISTS TabPrenotazioni
+                    (
+                        Id int AUTO_INCREMENT PRIMARY KEY,
+                        Utente varchar(15),
+                        NumeroCampo int(15),
+                        Orario varchar(20),
+                        DataPrenota int(20),
+                        NGiocatori int(20),
+                        Luci varchar(30),
+                        Riscaldamento varchar(30),
+                        CostoTot int(20),
+                        MetodoPagamento varchar(10)
+                    )";
+
+    mysqli_query($con, $sql);
+
+    
+
+    mysqli_close($con);
+>>>>>>> Stashed changes
     // ==================================================================================
 
     $sql="CREATE TABLE IF NOT EXISTS TabPrenotazioni
