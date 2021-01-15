@@ -44,7 +44,7 @@
                         Campo cementato
                         </h3>
                     </div>
-                    <img class="card-img-right flex-auto d-none d-md-block" src="Tennis/img/campo1.jpg"
+                    <img class="card-img-right flex-auto d-none d-md-block" src="img/campo1.jpg"
                         alt="Card image cap">
                 </div>
             </div>
@@ -56,7 +56,7 @@
                         Campo cementato
                         </h3>
                     </div>
-                    <img class="card-img-right flex-auto d-none d-md-block" src="Tennis/img/campo2.jpg"
+                    <img class="card-img-right flex-auto d-none d-md-block" src="img/campo2.jpg"
                         alt="Card image cap">
                 </div>
             </div>
@@ -70,7 +70,7 @@
                         Campo naturale
                         </h3>
                     </div>
-                    <img class="card-img-right flex-auto d-none d-md-block" src="Tennis/img/campo3.jpg"
+                    <img class="card-img-right flex-auto d-none d-md-block" src="img/campo3.jpg"
                         alt="Card image cap">
                 </div>
             </div>
@@ -83,7 +83,7 @@
                         Campo sintetico
                         </h3>
                     </div>
-                    <img class="card-img-right flex-auto d-none d-md-block" src="Tennis/img/campo4.jpg"
+                    <img class="card-img-right flex-auto d-none d-md-block" src="img/campo4.jpg"
                         alt="Card image cap">
                 </div>
             </div>
