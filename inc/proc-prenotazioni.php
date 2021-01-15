@@ -48,28 +48,5 @@
 		$disabilitaprenotazione = true;
 	}*/
 
-	$server = "localhost";
-    $utente = "root";
-    $password = "";
-    $db="Profilo";
-    
-    $databaseConnected = mysqli_connect($server, $utente, $password, $db);
-
-	$sql="CREATE TABLE IF NOT EXISTS TabPrenotazioni
-                    (
-                        Id int AUTO_INCREMENT PRIMARY KEY,
-                        Utente varchar(15),
-                        NumeroCampo int(15),
-                        Orario varchar(20),
-                        DataPrenota int(20),
-                        NGiocatori int(20),
-                        Luci boolean(30),
-                        Riscaldamento boolean(30),
-                        CostoTot int(20),
-						MetodoPagamento varchar(10),
-                    )";
-    echo "Creazione Tabella con successo";
-
-    $ok=mysqli_query($databaseConnected,$sql);
-    if (!$ok) die("Errore query: ".mysqli_errno($databaseConnected));
+	
 ?>
