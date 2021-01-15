@@ -35,7 +35,7 @@
         exit();
     }
 
-    $sql="UPDATE tabregistrati SET nome = '$nome', cognome = '$cognome', email = '$email', ntelefono' = '33310911154', 'passwordUtente' = 'azsxdcs', 'domandaRec' = '1s', 'rispostaRec' = 'fdss', 'manoUsata' = 'Destros', 'Orario' = 'Mattinas' WHERE 'tabregistrati'.'id' = $id";
+    $sql="UPDATE tabregistrati SET nome = '$nome', cognome = '$cognome', email = '$email', ntelefono' = '$numeroDiTelefono', 'passwordUtente' = '$password', 'domandaRec' = '$domandaRecuperoPassword', 'rispostaRec' = '$rispostaRecuperoPassword', 'manoUsata' = '$manoUsata', 'Orario' = '$fasciaOrario' WHERE 'tabregistrati'.'id' = $id";
 
     mysqli_query($con, $sql);
 
